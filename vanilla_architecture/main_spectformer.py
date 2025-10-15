@@ -453,7 +453,7 @@ def main(args):
                         'args': args,
                     }, checkpoint_path)
         
-        if (epoch + 1) % 100 == 0: #modified 20 epoch to 100 epoch
+        if (epoch + 1) % 10 == 0: #modified 20 epoch to 100 epoch
             file_name = 'checkpoint_epoch%d.pth' % epoch
             checkpoint_path = output_dir / file_name
             if model_ema is not None:

@@ -247,25 +247,29 @@ def main(args):
         model = SpectFormer(
             img_size=args.input_size, 
             patch_size=16, embed_dim=384, depth=12, mlp_ratio=4,
-            norm_layer=partial(nn.LayerNorm, eps=1e-6)
+            norm_layer=partial(nn.LayerNorm, eps=1e-6),
+            num_classes=args.nb_classes,
         )
     elif args.arch == 'spectformer-ti':
         model = SpectFormer(
             img_size=args.input_size, 
             patch_size=16, embed_dim=256, depth=12, mlp_ratio=4,
-            norm_layer=partial(nn.LayerNorm, eps=1e-6)
+            norm_layer=partial(nn.LayerNorm, eps=1e-6),
+            num_classes=args.nb_classes,
         )
     elif args.arch == 'spectformer-s':
         model = SpectFormer(
             img_size=args.input_size, 
             patch_size=16, embed_dim=384, depth=19, mlp_ratio=4, drop_path_rate=0.15,
-            norm_layer=partial(nn.LayerNorm, eps=1e-6)
+            norm_layer=partial(nn.LayerNorm, eps=1e-6),
+            num_classes=args.nb_classes,
         )
     elif args.arch == 'spectformer-b':
         model = SpectFormer(
             img_size=args.input_size, 
             patch_size=16, embed_dim=512, depth=19, mlp_ratio=4, drop_path_rate=0.25,
-            norm_layer=partial(nn.LayerNorm, eps=1e-6)
+            norm_layer=partial(nn.LayerNorm, eps=1e-6),
+            num_classes=args.nb_classes,
         )
     else:
         raise NotImplementedError

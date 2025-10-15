@@ -1,2 +1,2 @@
 datasets/
-vanilla_architecture/logs/spectformer-xs-cifar100/checkpoint_best.pth
+vanilla_architecture/logs/spectformer-xs-cifar100/*.pth

@@ -27,7 +27,6 @@ from spectformer import SpectFormer
 import warnings
 warnings.filterwarnings("ignore", message="Argument interpolation should be")
 
-
 def get_args_parser():
     parser = argparse.ArgumentParser('DeiT training and evaluation script', add_help=False)
     parser.add_argument('--batch-size', default=64, type=int)
